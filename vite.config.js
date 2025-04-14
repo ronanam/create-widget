@@ -22,5 +22,8 @@ export default defineConfig({
       formats: ["iife"],
     },
   },
-  base: "/",
+  base: "/create-widget/",
+  define: {
+    "process.env.NODE_ENV": JSON.stringify("production"),
+  },
 });
