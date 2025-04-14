@@ -34,7 +34,7 @@ const MyWidget = () => {
                 textDecoration: todo.completed ? "line-through" : "none",
               }}
             >
-              {todo.title} {todo.completed ? "✅" : "⬜"}
+              {todo.title} {todo.completed ? "✅" : ""}
             </li>
           ))
         )}
