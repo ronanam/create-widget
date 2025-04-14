@@ -18,7 +18,7 @@ export default defineConfig({
     lib: {
       entry: "./src/main.jsx",
       name: "MyWidget",
-      fileName: "create-widget",
+      fileName: "main",
       formats: ["iife"],
     },
   },
