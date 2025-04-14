@@ -3,12 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyWidget</title>
-    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <title>My Widget</title>
+
+    <!-- React/ReactDOM을 먼저 로드 (UMD 버전) -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <!-- 위젯 스크립트 로드 -->
+    <script src="my-widget.js"></script>
+    <!-- 실제 위젯 파일을 경로에 맞게 로드 -->
   </head>
   <body>
-    <div id="root"></div>
-    <script src="./main.iife.js"></script>
+    <!-- 위젯을 렌더링할 HTML 요소 -->
+    <div id="my-widget-root"></div>
+
+    <script>
+      // 위젯을 #my-widget-root 요소에 렌더링
+      MyWidget.renderWidget("my-widget-root");
+    </script>
   </body>
 </html>

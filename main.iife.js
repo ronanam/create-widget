@@ -1,9 +1,0 @@
-(function(l,v){"use strict";function E(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var f={exports:{}},i={};/**
- * @license React
- * react-jsx-runtime.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */var R;function O(){if(R)return i;R=1;var e=l,s=Symbol.for("react.element"),o=Symbol.for("react.fragment"),u=Object.prototype.hasOwnProperty,p=e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,M={key:!0,ref:!0,__self:!0,__source:!0};function y(a,t,x){var r,d={},h=null,j=null;x!==void 0&&(h=""+x),t.key!==void 0&&(h=""+t.key),t.ref!==void 0&&(j=t.ref);for(r in t)u.call(t,r)&&!M.hasOwnProperty(r)&&(d[r]=t[r]);if(a&&a.defaultProps)for(r in t=a.defaultProps,t)d[r]===void 0&&(d[r]=t[r]);return{$$typeof:s,type:a,key:h,ref:j,props:d,_owner:p.current}}return i.Fragment=o,i.jsx=y,i.jsxs=y,i}var m;function g(){return m||(m=1,f.exports=O()),f.exports}var n=g(),c={},_;function w(){if(_)return c;_=1;var e=v;return c.createRoot=e.createRoot,c.hydrateRoot=e.hydrateRoot,c}var S=w();const T=E(S),D=()=>{const[e,s]=l.useState([]);return l.useEffect(()=>{(async()=>{try{const p=await(await fetch("https://jsonplaceholder.typicode.com/todos")).json();s(p)}catch(u){console.error("Error fetching todos:",u)}})()},[]),n.jsxs("div",{children:[n.jsx("h2",{children:"My React Widget"}),n.jsx("p",{children:"Todos from JSONPlaceholder:"}),n.jsx("ul",{children:e.length===0?n.jsx("li",{children:"Loading..."}):e.slice(0,10).map(o=>n.jsxs("li",{style:{textDecoration:o.completed?"line-through":"none"},children:[o.title," ",o.completed?"✅":""]},o.id))})]})};function J(e){const s=document.getElementById(e);if(!s)return;T.createRoot(s).render(n.jsx(D,{}))}window.MyWidget={renderWidget:J}})(React,ReactDOM);
