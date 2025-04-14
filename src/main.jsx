@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import MyWidget from "./MyWidget";
 
 /** 로컬 테스트용 */
-renderWidget("my-container");
+// renderWidget("my-container");
 
 function renderWidget(containerId) {
   const rootEl = document.getElementById(containerId);

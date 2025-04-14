@@ -5,9 +5,9 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: "./src/main.tsx",
+      entry: "./src/main.jsx",
       name: "MyWidget",
-      fileName: "my-widget",
+      fileName: "create-widget",
       formats: ["iife"],
     },
     rollupOptions: {
@@ -22,5 +22,5 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true,
   },
-  base: "/my-widget/",
+  base: "/create-widget/",
 });
