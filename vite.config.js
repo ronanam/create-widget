@@ -9,7 +9,7 @@ export default {
   plugins: [react()],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/MyWidget.jsx"),
+      entry: resolve(__dirname, "src/main.js"),
       name: "MyWidget",
       fileName: (format) => `create-widget.${format}.js`,
       formats: ["umd"],

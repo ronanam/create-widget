@@ -6,25 +6,28 @@
     <!-- React와 ReactDOM을 CDN으로 제공 -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <!-- UMD 번들을 불러오기 -->
+
+    <!-- 위젯 UMD 번들 불러오기 -->
     <script src="https://ronanam.github.io/create-widget/create-widget.umd.js"></script>
   </head>
   <body>
     <h1>My React Widget 배포 페이지</h1>
 
-    <!-- 위젯이 렌더링될 위치 -->
-    <div id="widget-container"></div>
+    <hr />
+    <p>이 위젯을 사용하려면 아래와 같은 코드를 사용하세요:</p>
 
-    <!-- 위젯 사용 예시 -->
-    <p>위젯을 사용하려면 아래와 같이 코드를 추가하세요!</p>
     <pre>
-      <code>
-        const container = document.getElementById("widget-container");
-        if (window.MyWidget && container) {
-          const widget = React.createElement(window.MyWidget);
-          ReactDOM.createRoot(container).render(widget);
-        }
-      </code>
+<code>
+&lt;script src="https://unpkg.com/react@18/umd/react.production.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://ronanam.github.io/create-widget/create-widget.umd.js"&gt;&lt;/script&gt;
+
+&lt;div id="widget-container"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  window.MyWidget.mount(document.getElementById("widget-container"));
+&lt;/script&gt;
+</code>
     </pre>
   </body>
 </html>
