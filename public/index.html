@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My React Widget Example</title>
+    <!-- React와 ReactDOM을 CDN으로 제공 -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- UMD 번들을 불러오기 -->
+    <script src="/dist/create-widget.umd.js"></script>
+  </head>
+  <body>
+    <h1>My React Widget 배포 페이지</h1>
+
+    <!-- 위젯이 렌더링될 위치 -->
+    <div id="widget-container"></div>
+
+    <!-- 위젯 사용 예시 -->
+    <p>위젯을 사용하려면 아래와 같이 코드를 추가하세요:</p>
+    <pre>
+      <code>
+        const container = document.getElementById("widget-container");
+        if (window.MyWidget && container) {
+          const widget = React.createElement(window.MyWidget);
+          ReactDOM.createRoot(container).render(widget);
+        }
+      </code>
+    </pre>
+  </body>
+</html>

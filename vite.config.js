@@ -1,11 +1,19 @@
-import { defineConfig } from "vite";
+import { fileURLToPath } from "url";
+import { dirname, resolve } from "path";
 import react from "@vitejs/plugin-react";
 
-export default defineConfig({
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+export default {
   plugins: [react()],
   build: {
-    outDir: "dist", // 빌드 결과물 저장 폴더
-    emptyOutDir: true,
+    lib: {
+      entry: resolve(__dirname, "src/MyWidget.jsx"),
+      name: "MyWidget",
+      fileName: (format) => `create-widget.${format}.js`,
+      formats: ["umd"],
+    },
     rollupOptions: {
       external: ["react", "react-dom"],
       output: {
@@ -15,15 +23,7 @@ export default defineConfig({
         },
       },
     },
-    lib: {
-      entry: "./src/main.jsx",
-      name: "MyWidget",
-      fileName: "main",
-      formats: ["iife"],
-    },
+    outDir: "dist",
   },
   base: "/create-widget/",
-  define: {
-    "process.env.NODE_ENV": JSON.stringify("production"),
-  },
-});
+};
