@@ -25,5 +25,4 @@ export default {
     },
     outDir: "dist",
   },
-  base: "/create-widget/",
 };
