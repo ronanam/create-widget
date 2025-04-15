@@ -1,17 +1,17 @@
-import { fileURLToPath } from "url";
-import { dirname, resolve } from "path";
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-export default {
+export default defineConfig({
+  base: "/create-widget/",
   plugins: [react()],
+  define: {
+    "process.env.NODE_ENV": JSON.stringify("production"),
+  },
   build: {
     lib: {
-      entry: resolve(__dirname, "src/MyWidget.jsx"),
+      entry: "src/MyWidget.jsx",
       name: "MyWidget",
-      fileName: (format) => `create-widget.${format}.js`,
+      fileName: "create-widget",
       formats: ["umd"],
     },
     rollupOptions: {
@@ -25,5 +25,4 @@ export default {
     },
     outDir: "dist",
   },
-  base: "/create-widget/",
-};
+});
